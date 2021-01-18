@@ -20,22 +20,27 @@ var school = {
   'students': [{
       'Name': 'John',
       'Surname': 'Doe',
+      'Age' : 21,
     },
     {
       'Name': 'Jane',
       'Surname': 'Doe',
+      'Age' : 25,
     },
     {
       'Name': 'Desmond',
       'Surname': 'Eagle',
+      'Age' : 25,
     },
     {
       'Name': 'Dianne',
       'Surname': 'Ameter',
+      'Age' : 29,
     },
     {
       'Name': 'Max',
       'Surname': 'Conversion',
+      'Age' : 24,
     },
   ]
 }
@@ -46,10 +51,9 @@ for (var i = 0; i < school.students.length; i++) {
 
   var guy = school.students[i];
 
-  for (var key in guy) {
-    console.log(key + ': ' + guy[key]);
+  console.log('Name: ' + guy.Name);
+  console.log('Surname: ' + guy.Surname);
 
-  }
 }
 
 // Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente
@@ -66,15 +70,8 @@ while (school.students.length < 8) {
 
   school.students.push(guy);
 
-  for (var i = 0; i < school.students.length; i++) {
-    console.log('STUDENT N. ' + (i + 1));
-
-    var guy = school.students[i];
-
-    for (var key in guy) {
-      console.log(key + ': ' + guy[key]);
-
-    }
-  }
+  console.log('Name: ' + guy.Name);
+  console.log('Surname: ' + guy.Surname);
+  console.log('Age: ' + guy.Age);
 
 }
