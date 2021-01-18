@@ -52,4 +52,29 @@ for (var i = 0; i < school.students.length; i++) {
   }
 }
 
-// Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+// Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente
+// inserendo nell’ordine: nome, cognome e età.
+
+
+while (school.students.length < 8) {
+
+  var guy = {}
+
+  guy.Name = prompt('What\'s your name?');
+  guy.Surname = prompt('What\'s your surname?');
+  guy.Age = prompt('How old are you?');
+
+  school.students.push(guy);
+
+  for (var i = 0; i < school.students.length; i++) {
+    console.log('STUDENT N. ' + (i + 1));
+
+    var guy = school.students[i];
+
+    for (var key in guy) {
+      console.log(key + ': ' + guy[key]);
+
+    }
+  }
+
+}
